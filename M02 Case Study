@@ -1,0 +1,35 @@
+# M02 Case Study
+#
+# This program will accept data on students and determine if the student is on the Honor Roll
+# and the Dean's List.
+# The student qualifies as an Honor Roll student if the student's GPA is a 3.25 or better.
+# The student qualifies for the Dean's List if the student's GPA is a 3.5 or better.
+# If the student qualifies for neither, then the program will display the message "Student does not qualify.".
+# Continue to accept student data unless a last name of "ZZZ" is entered.
+#
+# Initialize variables
+#
+gpa = 0.0
+lastName = ""
+firstName = ""
+#
+# Enter a student last name
+#
+lastName = input("Enter student last name or ZZZ to quit: ")
+# Loop to process students
+#
+while lastName != "ZZZ":
+    firstName = input("Enter first name: ")
+    gpa = float(input("Enter student GPA: "))
+    if gpa >= 3.5:
+        print() # Skip a line of output
+        print("Student is on the Dean's List.")
+    else:
+        if gpa >= 3.25:
+            print() # Skip a line of output
+            print("Student is on the Honor Roll.")
+        else:
+            print("Student does not qualify for Honor Roll.")
+    print()
+    lastName = input("Enter student last name or ZZZ to quit: ")
+#
